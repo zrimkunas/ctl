@@ -1,0 +1,49 @@
+Title: Indigency "Flowchart"
+Author: [your name]
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in Louisiana.</p>
+    
+Q(1): Do you receive public assistance?
+A: Yes.
+	Q(1.1):GOTO:eligible
+A: No.
+	Q(1.2):GOTO:gross_income
+   
+Q(gross_income): What is your gross income?
+X:
+	Q(2.1):GOTO:num_family
+
+Q(num_family): What is the total number of family members living in your household (including yourself)?
+A[javascript: if(getvar('num_family')==1 && getvar('gross_income')<29160){goto('eligible')} else{goto('ineligible')}]:1
+A[javascript: if(getvar('num_family')==2 && getvar('gross_income')<39440){goto('eligible')} else{goto('ineligible')}]:2
+A[javascript: if(getvar('num_family')==3 && getvar('gross_income')<49720){goto('eligible')} else{goto('ineligible')}]:3
+A[javascript: if(getvar('num_family')==4 && getvar('gross_income')<60000){goto('eligible')} else{goto('ineligible')}]:4
+A[javascript: if(getvar('num_family')==5 && getvar('gross_income')<70280){goto('eligible')} else{goto('ineligible')}]:5
+A[javascript: if(getvar('num_family')==6 && getvar('gross_income')<80560){goto('eligible')} else{goto('ineligible')}]:6
+A[javascript: if(getvar('num_family')==7 && getvar('gross_income')<90840){goto('eligible')} else{goto('ineligible')}]:7
+A[javascript: if(getvar('num_family')==8 && getvar('gross_income')<101120){goto('eligible')} else{goto('ineligible')}]:8
+A:9+
+	Q(3.9):GOTO:big_family
+
+
+Q(big_family):Please type the total number of family members living in your household (including yourself).
+X:
+	Q(4.1):GOTO:calculate
+
+Q(calculate): Click below to determine eligibility: <x>big_family</x>
+A[javascript: if(getvar('big_family') >8 && getvar('gross_income')<(101120+(getvar('big_family')-8)*10280)){goto('eligible')} else{goto('ineligible')}]:Determine Eligibility
+
+
+
+Q(eligible): You qualify for appointed counsel in Louisiana!
+Q(ineligible): You do not qualify for appointed counsel in Louisiana.
+
+
+
+
+
+
+
