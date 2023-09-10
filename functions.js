@@ -1,4 +1,4 @@
-<script>
+
 function fedpov(house,income) {
 
 	alert(house);
@@ -32,4 +32,4 @@ function fedpov(house,income) {
 		return false;
 	}
 }
-</script>
+
