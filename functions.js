@@ -1,3 +1,7 @@
+function test() {
+	alert("hello");
+}
+
 
 function fedpov(house,income) {
 
