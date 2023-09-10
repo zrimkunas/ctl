@@ -33,6 +33,6 @@ function fedpov(house,income) {
 		return true;
 	} else {
 		return false;
-	}*/
+	}
 }
 
