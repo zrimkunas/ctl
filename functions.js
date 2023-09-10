@@ -1,4 +1,4 @@
-function fedpof(house,income) {
+function fedpov(house,income) {
 
 	alert(house);
 	
