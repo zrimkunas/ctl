@@ -6,7 +6,8 @@ function test() {
 function fedpov(house,income) {
 
 	alert(house);
-	
+	alert(income);
+	/*
 	var line = NaN;
 	
 	if(house==1) {
@@ -34,6 +35,6 @@ function fedpov(house,income) {
 		return true;
 	} else {
 		return false;
-	}
+	}*/
 }
 
