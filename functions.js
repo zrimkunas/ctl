@@ -27,7 +27,6 @@ function fedpov(house,income) {
 		line=101120+((house-8)*10280);
 	}
 
-	alert("about to enter");
 	if(income < line) {
 		return true;
 	} else {
