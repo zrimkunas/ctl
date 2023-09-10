@@ -1,5 +1,5 @@
 function test() {
-	alert(transcript('1'));
+	alert("hello");
 }
 
 
