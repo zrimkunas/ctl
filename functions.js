@@ -28,7 +28,7 @@ function fedpov(house,income) {
 	}
 	
 	if(income < line) {
-		alert("eligible")
+		alert("eligible");
 		return true;
 	} else {
 		return false;
