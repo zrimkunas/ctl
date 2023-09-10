@@ -1,8 +1,9 @@
+<script>
 function fedpov(house,income) {
 
 	alert(house);
 	
-	var line = NaN
+	var line = NaN;
 	
 	if(house==1) {
 		line=29160;
@@ -31,3 +32,4 @@ function fedpov(house,income) {
 		return false;
 	}
 }
+</script>
