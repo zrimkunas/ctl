@@ -4,10 +4,7 @@ function test() {
 
 
 function fedpov(house,income) {
-
-	alert(house);
-	alert(income);
-	/*
+	
 	var line = NaN;
 	
 	if(house==1) {
@@ -30,7 +27,8 @@ function fedpov(house,income) {
 		line=101120+((house-8)*10280);
 	}
 
-
+	alert("made it here");
+	
 	if(income < line) {
 		return true;
 	} else {
