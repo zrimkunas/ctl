@@ -26,10 +26,9 @@ function fedpov(house,income) {
 	} else if(house>8) {
 		line=101120+((house-8)*10280);
 	}
-
-	alert("made it here");
 	
 	if(income < line) {
+		alert("eligible")
 		return true;
 	} else {
 		return false;
