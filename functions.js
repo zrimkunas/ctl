@@ -1,5 +1,7 @@
 function fedpof(house,income) {
 
+	alert(house);
+	
 	var line = NaN
 	
 	if(house==1) {
