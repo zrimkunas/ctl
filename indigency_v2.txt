@@ -14,22 +14,8 @@ A: No.
 	Q(1.2):GOTO:gross_income
    
 Q(gross_income): What is your gross income?
-X:
-	Q(2.1):GOTO:num_family
-
-Q(num_family): What is the total number of family members living in your household (including yourself)?
-X:
-	Q(3.1):GOTO:calculate
-
-
-Q(calculate): Click below to determine eligibility: 
-A[javascript: if(fedpov(getvar('num_family'),getvar('gross_income'))){goto('eligible')} else{goto('ineligible')}]:Determine Eligibility
-
-
+X:number
+	Q(num_family): What is the total number of family members living in your household (including yourself)?
+	X[javascript: if(fedpov(getvar('num_family'),getvar('gross_income'))){goto('eligible')} else{goto('ineligible')}]:number
 Q(eligible): You likely qualify for appointed counsel in Louisiana!
 Q(ineligible): You likely do not qualify for appointed counsel in Louisiana.
-
-
-
-
-
