@@ -1,0 +1,84 @@
+Q(Q1):Is their birthday on or after June 16, 1981?
+A:Yes
+	Q(1.1):GOTO:Q2
+A:No
+	Q(1.2):GOTO:Ineligible
+		
+Q(Q2): Did the enter the US before their 16th birthday?
+A:Yes
+	Q(2.1):GOTO:Q3
+A:No
+	Q(2.2):GOTO:Ineligible
+
+Q(Q3): Did they enter the US before their 16th birthday?
+A:Yes
+	Q(3.1):GOTO:Q4
+A:No
+	Q(3.2):GOTO:Ineligible
+
+Q(Q4): Were they in the US on June 15, 2012?
+A:Yes
+	Q(4.1):GOTO:Q5
+A:No
+	Q(4.2):GOTO:Ineligible
+
+Q(Q5): Have they continuously resided in the US since June 15, 2007?
+A:Yes
+	Q(5.1):GOTO:Q6
+A:No
+	Q(5.2):GOTO:Ineligible
+
+Q(Q6): Have they been convicted of a felony or significant misdemeanor?
+A:Yes
+	Q(6.1):GOTO:Ineligible
+A:No
+	Q(6.2):GOTO:Q7
+
+Q(Q7): Have they been convicted of more than one misdemeanor?
+A:Yes
+	Q(7.1):GOTO:Ineligible
+A:No
+	Q(7.2):GOTO:Q8
+
+Q(Q8): Do they pose a threat to national security or public safety?
+A:Yes
+	Q(8.1):GOTO:Ineligible
+A:No
+	Q(8.2):GOTO:Q9
+
+Q(Q9): Are they currently in school?
+A:Yes
+	Q(9.1):GOTO:Over15
+A:No
+	Q(9.2):GOTO:Q10
+
+Q(Q10): Do they have a high school diploma or GED?
+A:Yes
+	Q(10.1):GOTO:Over15
+A:No
+	Q(10.2):GOTO:Q11
+
+Q(Q11): Are they an honorably discharged veteran of the Coast Guard or Armed Forces of the United States?
+A:Yes
+	Q(11.1):GOTO:Eligible
+A:No
+	Q(11.2):GOTO:Wait
+
+
+Q(Over15):Are they 15 or older?
+A:Yes
+	Q(12.1):GOTO:Eligible
+A:No
+	Q(12.2):GOTO:Removal
+
+Q(Removal):Are they currently in removal proceedings or have a final removal or VD order?
+A:Yes
+	Q(13.1):GOTO:Eligible
+A:No
+	Q(13.2):GOTO:Wait
+
+
+
+Q(Ineligible): They're ineligible.
+Q(Eligible): They're eligible.
+Q(Wait): Wait and See
